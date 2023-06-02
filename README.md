@@ -1,5 +1,10 @@
 # Chat-Application-
 Using apex oracle and node js connecting through websockets
   
-  firstly import the chat.sql to your apex oracle
-  Then, run the application using the ngrok server using its local host
+  
+  
+  
+  Install the APEX application, using the Import feature of Oracle APEX
+  During installation, make sure to Install supporting objects too. This will create a table to store the chat messages and some test data.
+  Then run the server side code installing the required packages.
+ 
