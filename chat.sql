@@ -19,7 +19,7 @@ whenever sqlerror exit sql.sqlcode rollback
 begin
 wwv_flow_imp.import_begin (
  p_version_yyyy_mm_dd=>'2023.04.28'
-,p_release=>'23.1.0'
+,p_release=>'23.1.1'
 ,p_default_workspace_id=>69981446281591059514
 ,p_default_application_id=>22487
 ,p_default_id_offset=>0
@@ -33,12 +33,12 @@ prompt APPLICATION 22487 - Chat Application
 -- Application Export:
 --   Application:     22487
 --   Name:            Chat Application
---   Date and Time:   03:54 Friday June 2, 2023
+--   Date and Time:   03:27 Saturday July 8, 2023
 --   Exported By:     SACHINKARKI800@GMAIL.COM
 --   Flashback:       0
 --   Export Type:     Application Export
 --     Pages:                      4
---       Items:                    8
+--       Items:                    9
 --       Validations:              2
 --       Processes:                6
 --       Regions:                  5
@@ -72,7 +72,8 @@ prompt APPLICATION 22487 - Chat Application
 --       Reports:
 --       E-Mail:
 --     Supporting Objects:  Included
---   Version:         23.1.0
+--       Install scripts:          1
+--   Version:         23.1.1
 --   Instance ID:     63113759365424
 --
 
@@ -119,10 +120,10 @@ wwv_imp_workspace.create_flow(
 ,p_auto_time_zone=>'N'
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'Chat Application'
-,p_last_updated_by=>'SACHINKARKI800@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20230531055123'
+,p_last_updated_by=>'SUNIL'
+,p_last_upd_yyyymmddhh24miss=>'20230602115403'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
-,p_files_version=>28
+,p_files_version=>30
 ,p_print_server_type=>'INSTANCE'
 ,p_is_pwa=>'Y'
 ,p_pwa_is_installable=>'N'
@@ -1472,6 +1473,66 @@ wwv_flow_imp_shared.create_app_static_file(
 ,p_file_content => wwv_flow_imp.varchar2_to_blob(wwv_flow_imp.g_varchar2_table)
 );
 null;
+end;
+/
+prompt --application/shared_components/files/apex_data_pkg_chat_messages_473472_zip
+begin
+wwv_flow_imp.g_varchar2_table := wwv_flow_imp.empty_varchar2_table;
+wwv_flow_imp.g_varchar2_table(1) := '504B03041400000808003247C256DA997A83BB070000B258000012000000434841545F4D455353414745532E6A736F6EB55C4D6B234710BDFB574C74B661FA73A6E7621407B20B890F8E7358926066AD596B16496324398E58F2DF533D928D0F56776DBD';
+wwv_flow_imp.g_varchar2_table(2) := '08BCB008193FFAA3AADEAB57FDED6CD26FBBE566D2FC71F68DFE3F9B34A65667E79365B7D9B40FDD5DFC64F5B458D0474F9B6E7DB76A97DDA499FC36FD797A33A10FEF87E5B25B6DEFB6DD3F5BFA7CDEEDDE7E3A6BB7F1DBBAD4E6A274173ADC96B67175';
+wwv_flow_imp.g_varchar2_table(3) := '63DDDB6F2D8759FFA5EFD69BD73FD56FEE86E755B7A6DFFDD46D2667FF9E9DBFA2D310BA5D0E9F6BCAAA31418CCF57797C37D31F3F5E1FC19785673DFD11293C5B32960F80171AE509A178F52C70F69EE7ED3605CFDDAA92CE4F5396E2D5B3D0E62E1643';
+wwv_flow_imp.g_varchar2_table(4) := '029F296F4BDF68C2574BF1B9D27296EFEA83647B23BEBA71B6B1951C5F0D5CDE3E032ED0CA35A5166F6E00224B3C7B45BBEE8AA74B0E4AABC44BA8185B0C1C41BA2214A24B23C7E7E4F81E1F1F39E89C15A3D340F80B21E4D151F4139F40A7CDC9F7D6D3';
+wwv_flow_imp.g_varchar2_table(5) := '5F91EF2DE3FA1EC3B7CB83538672AF7CF14A39B876352B9EBBE2BE5D15B3A1D8CEFB4DD12E16C5ACDD158B61F5507C6E3F6742E31EBE969F4CCBD87B69688C794F0179CFE980145D9C83690C10747CC9C8CB627CEA50B4CA8B428F841D0E3E17EB06F9C5';
+wwv_flow_imp.g_varchar2_table(6) := 'F69CC083AC9F6B4C05DC6DAF90BAAB2FE8D7DA7532318F18AD6A94F802EBD243B5577A11B51D8B438A30E24D369CD25F0ED08DC57F4535B218A066940EC9534891BB5B7759949ACEA2186540B63996899BE22955E5681DC3A1AD001A60FC09AFF381C307';
+wwv_flow_imp.g_varchar2_table(7) := 'A0D2361EDA681687AF9183589FB00EDBE3A323A8C5E9CED4408D3DEF53C5C24162A09B2CE7519AC1E18FA2A3E5CBAD5E04072848164AC6B9C51B051025AE146C05801B4968AC617BAA62B34A83A18A01501A5857F85832C9517982469944AED3702EC851';
+wwv_flow_imp.g_varchar2_table(8) := '74ABE199054FBCC98E57AE0A33F14164A052417E0A6B082043A831804868032450B356AFA67A4ECE9680F0DCCDE7730ED33480068288703C32A71B250F2D8641E40126ECA8BA9283F3C8D9CB81A3CC6181CCEBD0DE48169EA6B32767713C0282B0F4C882';
+wwv_flow_imp.g_varchar2_table(9) := 'C571C5F3D473049FB54056F30ADBDEBC861080A2D443C274F266EC0504BA1CE29ACF6B646BFBA2FBBB5B0FAB14B33C28080EA06D9ED7FC129505FEA2D4B76545B783E29F9CB79DF002EF7965641E725EE4A15D661023FA912B44068A2F042FA5601D940D';
+wwv_flow_imp.g_varchar2_table(10) := '07281B8697DBA402D1B8BFDA42BD7F86F682F05E87F04AC3299A11D5C08FAA8638FD5A0E6543F0053AE18D91E3E3F94E0056548FF581BC70C604D4E179DF20CE830C407FD8D6ACEA3EA14F72158491C539C00BC0E829215E0AC2178092C1064864CB8233';
+wwv_flow_imp.g_varchar2_table(11) := '0AB82B4E011A5BAE134BE0A2450BB000001AD6D7AF5FF3E802120603D0C4CEA28B2D7643074FBE7680F4CC4487F877801E3BCFDB018053407550D7751E5D45094E8E0EA80EEA3AEF3C510A917335D24067B90F808DB5A7E4E57B7C1EA8EB7D79324D682F';
+wwv_flow_imp.g_varchar2_table(12) := '6A50E12767BE9C4C91D2842EF37D73AD11EF86E55455BF5F7FFCE5EE767AFDD3F4887371DFFA1D89FA8E98FA0F19265C8F1D56B914C3639A749B3F4CAFAF3EBD170DDB76DDB659944E018296F1105FCAD2254D01512C566A8CAC67A870B4B901A5BEF127';
+wwv_flow_imp.g_varchar2_table(13) := '2C4E5FB99C93BBCC4B56873FC595F26282AAE8F88911428A5B6E05F7F80250411B0F9481BC1EBF432C6D969354902EB506AA54CB397ED814410D389D2C47684BE844F9D5D316D07939C412771099384B2085A83852F4CDF457C9DD30B1A6A11F79EAB015';
+wwv_flow_imp.g_varchar2_table(14) := '4043B2D4DCC7BCE6E417B7022EEE773A384AC05369ED69DBC0D109AF1A25EFF25BC4739CDF640B4D39E0F9372B033A0B3938B0492016C00A7021588E968F020C489009880D21E22B36EDFDBC5F3106821CD094B3014B76597494EB10A11209D57115F362';
+wwv_flow_imp.g_varchar2_table(15) := '25856B3979B71C3F2FA6A40256CA0088462C355023232B88D1333024AD98E280612AE05E2C1679BD4D03F595E3D557B20A2682AB01C9C8B11419486F8BD40D102B59A9432C56466FB63CE099531AC446F79A5C10729081A3BF2CDA87B65F65308E2E3160';
+wwv_flow_imp.g_varchar2_table(16) := '568AE72C3E8A312757DA38402F379F7ADE980F008F32863C267B68C23A777747B5977286DC3FE9395D5FA945712F46ABC6C8C5684E4A4B5874F2E80CD0A5F19CD96AC40068A09B814C077FC7909E432C9E3CD29BD4EDD72D47B72F8104A73846AC23EA4B';
+wwv_flow_imp.g_varchar2_table(17) := '52BB7A915EE4BD7D8D78140F5F3D86CEC68583340DC361BDE06014F07AC829C7FB5F6553C0805501F856C396B8EE435EB32290F215AC4EDB098EB29001B43FC7EB04CBA7A274401435DE78404A7229BE47A08C2398402168395398FF8B938D80D6C8B31D';
+wwv_flow_imp.g_varchar2_table(18) := 'E0E437E7D59D002D24ABE64AF816FB4DD16F8B87812E783164EAFFA86759A042E4BDC22335218FAD91F84C90384A0648F94DA698177040E78B832ED198CB6F2DE44D0D40577D37144BBACECFED3CD7FF7AF592C979805300D2F1F918FA5926E7455E06F9';
+wwv_flow_imp.g_varchar2_table(19) := 'E4D2A5C31EEACBEB342393074C32BC268998EBD9F1511BF169F41C691A754629C042E1112F28F355160798503CC770993C7F0CB657360E98FA82A4A43C9B770AE1CB2C5B63DAF816AB9C3F9FCA5257312616EBF673AADFF4C6FA2697AEBDE52C6A1AF66E';
+wwv_flow_imp.g_varchar2_table(20) := '48744EDEA004EE0EE7392DA2D057472A9E38A9B11B9E8A59DB9FB3D653FEF61293ECBF8B74ACC9BFAC87256DFD9283533E1DE639DAF1B168F42115CDDFC0036463CBEAE3BDBB8CDB6E73FCE1D0B7C7513EFACC7B9127A13B71C63B47D9093889BCD74DDF';
+wwv_flow_imp.g_varchar2_table(21) := '5DC2FB615814EDE3E3A2BF6FB77D8223BC2E672DE8EDFD45FFFE03504B03041400000808003247C2560157E5BE8D0100007D0500001A000000434841545F4D455353414745535F70726F66696C652E6A736F6EBD946F6BC23010C6DFFB294A5F9BE13FD8';
+wwv_flow_imp.g_varchar2_table(22) := 'F09DAC751656055BD9C61C25D4AB666B12C9C5B9217EF7A571D38DD90D75ACD0409FBBE7F2BBD0DCAAE2386EC67220FA750EAED3765AD5424226A6465472596819CD11AADB5410A99C988422E476AE9B8D51DCBD706DDC1808420EA996CA8699068E9BD8';
+wwv_flow_imp.g_varchar2_table(23) := '0C68E142C204C99842FDBD7C8ACF45F55C224CAC7DEC6EBC9954A961548C93E5CCD4C4394D2DAE568B77ABCC175CA0D1CCD7BD791D676557131394DB6437F06C392B4EA8A6DBAE1B3B1952C6694ED219DD7470B6C7427210D6B6F37DED7AB23331248F28';
+wwv_flow_imp.g_varchar2_table(24) := 'C5B651ABAFAB2584A11F459D2B3FF92F520E88740AC9F1C4A3C81F26FD4EE89700D7CBA1EAB5466D3FD6024125768B23A92E0761E8F7E324F66FE3C3C15AB55A09582A3907A1130D2FFA5436AF13971D5AB39CEDFC673093FFE9D0CCBDE154134EF1C966';
+wwv_flow_imp.g_varchar2_table(25) := 'DD99878421F1BCB11B8FDD5EAFD16A87413B8A4EED251C784137F087D15FFE051F3D71336E32060A8FA50CA26470D3F78787C3354B2E3826722940FD0664D6073B9EE6549999564C3CB43BB6EA95F51B504B010214001400000808003247C256DA997A83';
+wwv_flow_imp.g_varchar2_table(26) := 'BB070000B2580000120000000000000000002000B68100000000434841545F4D455353414745532E6A736F6E504B010214001400000808003247C2560157E5BE8D0100007D0500001A0000000000000000002000B681EB070000434841545F4D45535341';
+wwv_flow_imp.g_varchar2_table(27) := '4745535F70726F66696C652E6A736F6E504B0506000000000200020088000000B00900002000496D706C656D656E746174696F6E20627920416E746F6E205363686566666572';
+wwv_flow_imp_shared.create_app_static_file(
+ p_id=>wwv_flow_imp.id(22654605860044080310)
+,p_file_name=>'APEX$DATA$PKG/CHAT_MESSAGES$473472.zip'
+,p_mime_type=>'application/x-zip'
+,p_file_charset=>'utf-8'
+,p_file_content => wwv_flow_imp.varchar2_to_blob(wwv_flow_imp.g_varchar2_table)
+);
+end;
+/
+prompt --application/shared_components/files/apex_data_pkg_user_reg_150339_zip
+begin
+wwv_flow_imp.g_varchar2_table := wwv_flow_imp.empty_varchar2_table;
+wwv_flow_imp.g_varchar2_table(1) := '504B03041400000808003347C2562F2FF4B920010000710400000D000000555345525F5245472E6A736F6EAD93C16AC3300C86EF790C9FCBA89550464E7986ED3846D16CD398C44E6BA79450FAEE4DD2B0DA6A7161EC60B065E993F4CB3E674CF7CA7856';
+wwv_flow_imp.g_varchar2_table(2) := '7E65E7712F59096BC856ECE895B368142BD907FE68CB469B32A8DBD1E02643B59B4E6FA233D3D57EBB47EF4F9D93F7804BB65A901C788C6C44C8E390804DAE016943489FB84317C21A748D4EF096803B12D6FCBFFB05DAAF3F5ADD6E7BB41223F2D05543';
+wwv_flow_imp.g_varchar2_table(3) := 'F79459ABB6ED226691C7CC1AAD18064F8B6D0CCE37356A8B0E13651F4ECAF503873C4CB301AAAFA849829702DF2282A13D2A6C22A2488A6B62194881B30073C70915FC8B09CEBEB31391030A52BA4323E2B761C4182D1D3602204FE4E895EFAB077CF187';
+wwv_flow_imp.g_varchar2_table(4) := '6E5243456988F8B483F8EF25B5277FEFFDD9AB0E61BF8688B2582FD9F7B8AE504B03041400000808003347C2569B65EBDB290100004F03000015000000555345525F5245475F70726F66696C652E6A736F6EAD92414BC3401085EFFD1521E7ACA4690FE2';
+wwv_flow_imp.g_varchar2_table(5) := '2D608442ABA5B1785029CB66625636BB61273148E97F7733919462A3503C6421EFCD9BFD869DFDC4F3FC5C2A60F56705BE77E3CD834E42A9DF9C684DDB69395708C1500A5A98CC1574961F2F67D1F6F1EEDA27DF05188202511B4BB6ACA1C4DE2B807729';
+wwv_flow_imp.g_varchar2_table(6) := '6452B35C5AAC7FB617F8D175570621A3F88BDF6773638563B4B2646DE17A62C505E1D6B6F98E1AD5941A9DE6FE9EDDE7797B3A9DA77949C5FEE296DA9198F19A0F53474719842CB962A2E0FD045767224C81A6D831773A75760C4964EF68F43028E98760';
+wwv_flow_imp.g_varchar2_table(7) := '84709B269BFB78958C704EC759A661149EA769102C5D702153B28A17CBFF0482924B7529CD7AB78ED3F4E96133F696BF20CDC37004A9DA551CB135F6CF9773E72B6D5CC5AD5BD36E8991AE9D4D0E5F504B010214001400000808003347C2562F2FF4B920';
+wwv_flow_imp.g_varchar2_table(8) := '010000710400000D0000000000000000002000B68100000000555345525F5245472E6A736F6E504B010214001400000808003347C2569B65EBDB290100004F030000150000000000000000002000B6814B010000555345525F5245475F70726F66696C65';
+wwv_flow_imp.g_varchar2_table(9) := '2E6A736F6E504B050600000000020002007E000000A70200002000496D706C656D656E746174696F6E20627920416E746F6E205363686566666572';
+wwv_flow_imp_shared.create_app_static_file(
+ p_id=>wwv_flow_imp.id(22654606050734080349)
+,p_file_name=>'APEX$DATA$PKG/USER_REG$150339.zip'
+,p_mime_type=>'application/x-zip'
+,p_file_charset=>'utf-8'
+,p_file_content => wwv_flow_imp.varchar2_to_blob(wwv_flow_imp.g_varchar2_table)
+);
 end;
 /
 prompt --application/plugin_settings
@@ -19538,22 +19599,38 @@ wwv_flow_imp_page.create_page(
 ,p_autocomplete_on_off=>'OFF'
 ,p_group_id=>wwv_flow_imp.id(13193853320265047158)
 ,p_javascript_code=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'var exampleSocket;',
+'function getNewRow(username, message) {',
+'    return `<li class="t-Comments-item${username === apex.env.APP_USER ? " t-Chat--own" : "" }" data-id="145" data-rownum="146">  <div class="t-Comments-item  #COMMENT_MODIFIER!RAW#">',
+'     <div class="t-Comments-icon">',
+'         <span class="t-Avatar t-Avatar--icon t-Avatar--rounded t-Avatar--xs fa fa-user u-color u-color"></span> </div>',
+'     <div class="t-Comments-body">',
+'      <div class="t-Comments-info">',
+'        <span class="t-Comments-user">${username}</span>',
+'        <span class="t-Comments-date">02-JUN</span>       </div>',
+'      <div class="t-Comments-comment">',
+'        ${message}',
+'         </div>',
+'    </div>',
+'  </div>',
+'</li>`',
+'}',
 'function startWebsocket() {',
-'    const exampleSocket = new WebSocket("wss://f8b0-2400-1a00-b010-a654-26-b547-64f2-4de7.ngrok-free.app:443");',
+'    exampleSocket = new WebSocket("wss://4172-2400-1a00-b010-2a6e-d10a-6ce-7a7f-7913.ngrok-free.app:443");',
 '  ',
 '    exampleSocket.onopen = (event) => {',
 '      console.log("Connected to server!");',
 '    };',
 '  ',
 '    exampleSocket.onmessage = (event) => {',
-'        event.data.text().then((text) => {',
-'          if (text === ''connected'') {',
-'            console.log(''New client connected'');',
-'            // Perform actions when a new client is connected',
-'          } else {',
-'            console.log(text);',
-'          }',
-'        });',
+'       // debugger;',
+'        if (event.data === ''connected'') {',
+'            return;//',
+'        }',
+'        let websocketMessage = JSON.parse(event.data)',
+'        let newRowInfo = getNewRow(websocketMessage.username, websocketMessage.message);',
+'        $(''#Displayed ul'')[0].innerHTML  += newRowInfo;',
+'        $(''.t-Comments'').scrollTop($(''.t-Comments'')[0].scrollHeight);',
 '      };',
 '',
 '    exampleSocket.onerror = function (error) {',
@@ -19564,20 +19641,13 @@ wwv_flow_imp_page.create_page(
 '      console.log("WebSocket error: ", event);',
 '    });',
 '  ',
-'    const postMessageBtn = document.getElementById("post-message-btn");',
-'    postMessageBtn.addEventListener("click", function() {',
-'      const value = $x("P6_MESSAGE").value;',
-'      const username = document.querySelector(".t-Button-label").textContent;',
-'      const data = { username: username, message: value };',
-'      console.log("Username:", username);',
-'      console.log("Message:", value);',
-'      const jsonData = JSON.stringify(data);',
-'      exampleSocket.send(jsonData);',
-'    });',
 '  }',
 '  ',
 '  startWebsocket();',
-'  '))
+'  ',
+'  setTimeout(()=>{',
+'      $(''.t-Comments'').scrollTop($(''.t-Comments'')[0].scrollHeight);',
+'  },1000)'))
 ,p_inline_css=>wwv_flow_string.join(wwv_flow_t_varchar2(
 '/* BEGIN comments/chat region styles */',
 '.t-Chat .t-Chat--own .t-Comments-icon {',
@@ -19585,6 +19655,9 @@ wwv_flow_imp_page.create_page(
 '  margin-left: 12px;',
 '}',
 '',
+'#P6_PROTECT_AGAINST_ENTER {',
+'    display: none;',
+'}',
 '.t-Chat .t-Chat--own {',
 '  flex-direction: row-reverse;',
 '}',
@@ -19615,8 +19688,8 @@ wwv_flow_imp_page.create_page(
 ,p_overwrite_navigation_list=>'Y'
 ,p_protection_level=>'C'
 ,p_page_component_map=>'13'
-,p_last_updated_by=>'SACHINKARKI800@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20230531055123'
+,p_last_updated_by=>'SUNIL'
+,p_last_upd_yyyymmddhh24miss=>'20230602115403'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(18258198811517435246)
@@ -19742,7 +19815,7 @@ wwv_flow_imp_page.create_page_plug(
 );
 wwv_flow_imp_page.create_page_button(
  p_id=>wwv_flow_imp.id(18737889466641433904)
-,p_button_sequence=>20
+,p_button_sequence=>40
 ,p_button_plug_id=>wwv_flow_imp.id(18737889330758433903)
 ,p_button_name=>'Send'
 ,p_button_static_id=>'post-message-btn'
@@ -19756,15 +19829,33 @@ wwv_flow_imp_page.create_page_button(
 ,p_grid_new_column=>'Y'
 );
 wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(18737889558568433905)
+ p_id=>wwv_flow_imp.id(32729934954376957035)
 ,p_name=>'P6_MESSAGE'
-,p_item_sequence=>10
+,p_item_sequence=>20
 ,p_item_plug_id=>wwv_flow_imp.id(18737889330758433903)
+,p_use_cache_before_default=>'NO'
 ,p_prompt=>'Message'
 ,p_placeholder=>'Enter Your Message....'
 ,p_display_as=>'NATIVE_TEXT_FIELD'
 ,p_cSize=>300
 ,p_colspan=>10
+,p_grid_label_column_span=>0
+,p_field_template=>wwv_flow_imp.id(13193738945062047091)
+,p_item_template_options=>'#DEFAULT#'
+,p_attribute_01=>'N'
+,p_attribute_02=>'N'
+,p_attribute_04=>'TEXT'
+,p_attribute_05=>'BOTH'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(32729935136585957037)
+,p_name=>'P6_PROTECT_AGAINST_ENTER'
+,p_item_sequence=>50
+,p_item_plug_id=>wwv_flow_imp.id(18737889330758433903)
+,p_display_as=>'NATIVE_TEXT_FIELD'
+,p_cSize=>30
+,p_tag_attributes=>'style=''display:none'''
+,p_begin_on_new_line=>'N'
 ,p_grid_label_column_span=>0
 ,p_field_template=>wwv_flow_imp.id(13193738945062047091)
 ,p_item_template_options=>'#DEFAULT#'
@@ -19801,24 +19892,31 @@ wwv_flow_imp_page.create_page_da_action(
 ' commit;',
 '',
 'end;'))
-,p_attribute_02=>'P6_MESSAGE'
 ,p_attribute_05=>'PLSQL'
 ,p_wait_for_result=>'Y'
+,p_server_condition_type=>'NEVER'
 );
 wwv_flow_imp_page.create_page_da_action(
  p_id=>wwv_flow_imp.id(18737889799191433907)
 ,p_event_id=>wwv_flow_imp.id(18737889661876433906)
 ,p_event_result=>'TRUE'
-,p_action_sequence=>20
+,p_action_sequence=>30
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_JAVASCRIPT_CODE'
 ,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'apex.message.showPageSuccess("Message sent.");',
-'apex.region("Displayed").refresh();',
-'apex.item("P6_MESSAGE").setValue("");',
+'// apex.region("Displayed").refresh();',
 'apex.item("P6_MESSAGE").enable();',
 'apex.item("P6_MESSAGE").setFocus();',
-''))
+'const value = $x("P6_MESSAGE").value;',
+'apex.item("P6_MESSAGE").setValue("");',
+'const username = document.querySelector(".t-Button-label").textContent;',
+'const data = { username: username, message: value };',
+'console.log("Username:", username);',
+'console.log("Message:", value);',
+'const jsonData = JSON.stringify(data);',
+'if (exampleSocket)',
+'    exampleSocket.send(jsonData);'))
 );
 wwv_flow_imp_page.create_page_da_event(
  p_id=>wwv_flow_imp.id(18131729823775656338)
@@ -19827,21 +19925,65 @@ wwv_flow_imp_page.create_page_da_event(
 ,p_triggering_element_type=>'ITEM'
 ,p_triggering_element=>'P6_MESSAGE'
 ,p_triggering_condition_type=>'JAVASCRIPT_EXPRESSION'
-,p_triggering_expression=>'event.key == ''Enter'' && !apex.item("P6_MESSAGE").isEmpty()'
+,p_triggering_expression=>'this.browserEvent.originalEvent.keyCode == 13 && !apex.item("P6_MESSAGE").isEmpty()'
 ,p_bind_type=>'bind'
 ,p_execution_type=>'IMMEDIATE'
-,p_bind_event_type=>'keydown'
+,p_bind_event_type=>'keypress'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(32729935225117957038)
+,p_event_id=>wwv_flow_imp.id(18131729823775656338)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_EXECUTE_PLSQL_CODE'
+,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'begin',
+' -- Proceed to insert the message in the table',
+' insert into chat_messages (user_name, is_owner, comment_text, comment_date)',
+'   values (:APP_USER, ''Yes'', :P6_MESSAGE, sysdate);',
+'',
+'end;'))
+,p_attribute_02=>'P6_MESSAGE'
+,p_attribute_05=>'PLSQL'
+,p_wait_for_result=>'Y'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(32729935319449957039)
+,p_event_id=>wwv_flow_imp.id(18131729823775656338)
+,p_event_result=>'TRUE'
+,p_action_sequence=>20
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_JAVASCRIPT_CODE'
+,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'apex.message.showPageSuccess("Message sent.");',
+'// apex.region("Displayed").refresh();',
+'apex.item("P6_MESSAGE").enable();',
+'apex.item("P6_MESSAGE").setFocus();',
+'const value = $x("P6_MESSAGE").value;',
+'apex.item("P6_MESSAGE").setValue("");',
+'const username = document.querySelector(".t-Button-label").textContent;',
+'const data = { username: username, message: value };',
+'console.log("Username:", username);',
+'console.log("Message:", value);',
+'const jsonData = JSON.stringify(data);',
+'if (exampleSocket)',
+'    exampleSocket.send(jsonData);'))
 );
 wwv_flow_imp_page.create_page_da_action(
  p_id=>wwv_flow_imp.id(18131729930996656339)
 ,p_event_id=>wwv_flow_imp.id(18131729823775656338)
 ,p_event_result=>'TRUE'
-,p_action_sequence=>10
+,p_action_sequence=>30
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_JAVASCRIPT_CODE'
 ,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
 '// Trigger button click',
-'$("#post-message-btn").click();'))
+'$("#post-message-btn").click();',
+'console.log(''trigger'');',
+'return true;',
+''))
+,p_server_condition_type=>'NEVER'
 );
 end;
 /
@@ -19849,6 +19991,26 @@ prompt --application/deployment/definition
 begin
 wwv_flow_imp_shared.create_install(
  p_id=>wwv_flow_imp.id(14839975733809205005)
+);
+end;
+/
+prompt --application/deployment/install/install_dp
+begin
+wwv_flow_imp_shared.create_install_script(
+ p_id=>wwv_flow_imp.id(22654606194250080350)
+,p_install_id=>wwv_flow_imp.id(14839975733809205005)
+,p_name=>'dp'
+,p_sequence=>10
+,p_script_type=>'INSTALL'
+,p_script_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'begin',
+'    --CHAT_MESSAGES: 141/10000 rows exported, APEX$DATA$PKG/CHAT_MESSAGES$473472',
+'    apex_data_install.load_supporting_object_data(p_table_name => ''CHAT_MESSAGES'', p_delete_after_install => false );',
+'    --PERSONAL_CHAT: 0/10000 rows exported, no file generated',
+'    apex_data_install.load_supporting_object_data(p_table_name => ''PERSONAL_CHAT'', p_delete_after_install => false );',
+'    --USER_REG: 13/10000 rows exported, APEX$DATA$PKG/USER_REG$150339',
+'    apex_data_install.load_supporting_object_data(p_table_name => ''USER_REG'', p_delete_after_install => false );',
+'end;'))
 );
 end;
 /
